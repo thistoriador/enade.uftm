@@ -6,3 +6,6 @@ Atualização pública baseada em fontes oficiais do Inep/MEC e conferência cru
 
 
 v0.8: Open Graph/Twitter Cards para preview de compartilhamento (1200x630).
+
+
+v0.9: timeline vertical responsiva no celular e botão mostrar/ocultar senha em login, cadastro e redefinição.
