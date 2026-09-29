@@ -18,3 +18,6 @@ v0.11: no celular, remove o menu hambúrguer e oferece acesso direto 'Coordenaç
 
 
 v0.11.1: corrige o botão Coordenação no celular para chamar diretamente a função existente openCoord().
+
+
+v0.12 final do ciclo: botão Coordenação mobile em vinho; banner institucional no desktop; contatos clicáveis da Secretaria e Coordenação; contato da Coordenação junto ao FAQ.

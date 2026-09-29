@@ -112,6 +112,59 @@ main{padding:28px 34px 55px;min-width:0}.top{display:flex;justify-content:space-
  .mobile-coord-btn span{font-size:11px}
 }
 
+
+/* v0.12 — fechamento visual */
+@media(max-width:850px){
+ .mobile-coord-btn{
+   background:var(--wine)!important;
+   color:#fff!important;
+   border-color:var(--wine)!important;
+   box-shadow:0 5px 14px rgba(92,22,31,.16);
+ }
+}
+
+/* Faixa institucional / banner */
+.course-banner{
+  position:relative; overflow:hidden;
+  background:linear-gradient(105deg,#f6efe4 0%,#f8f2e9 63%,#ead9c8 100%);
+  border-top:1px solid #eadfd2; border-bottom:5px solid var(--wine);
+}
+.course-banner-inner{
+  max-width:1180px;margin:0 auto;min-height:116px;padding:18px 28px;
+  display:flex;align-items:center;gap:20px;position:relative;
+}
+.course-banner-logo{width:82px;height:82px;object-fit:contain;flex:0 0 82px}
+.course-banner-copy{position:relative;z-index:2}
+.course-banner-copy strong{display:block;color:var(--wine);font-family:Georgia,serif;font-size:27px;line-height:1.05;letter-spacing:.01em}
+.course-banner-copy b{display:block;color:#2f2827;font-size:14px;letter-spacing:.12em;margin-top:7px}
+.course-banner-copy span{display:block;color:#735f57;font-size:11px;font-weight:800;letter-spacing:.09em;margin-top:4px}
+.course-banner-mark{
+  margin-left:auto;align-self:stretch;width:33%;min-width:220px;position:relative;opacity:.18;
+  background:
+    linear-gradient(145deg,transparent 40%,var(--wine) 41% 44%,transparent 45%),
+    linear-gradient(35deg,transparent 45%,#a56b38 46% 49%,transparent 50%);
+}
+.course-banner-mark:after{
+  content:"UFTM";position:absolute;right:10px;bottom:8px;
+  font:900 50px/1 Georgia,serif;color:var(--wine);letter-spacing:.05em;
+}
+.contact-strip{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;
+  max-width:1180px;margin:26px auto 0;
+}
+.contact-card{
+  display:flex;align-items:center;gap:12px;padding:17px 18px;background:#fff;
+  border:1px solid #eadfd2;border-radius:16px;box-shadow:0 8px 24px rgba(68,42,31,.06)
+}
+.contact-icon{width:42px;height:42px;border-radius:12px;background:#f5ebe4;display:grid;place-items:center;font-size:19px}
+.contact-card small{display:block;color:#7b6b65;font-weight:800;margin-bottom:3px}
+.contact-card a{color:var(--wine);font-weight:900;text-decoration:none;word-break:break-word}
+.contact-card a:hover{text-decoration:underline}
+@media(max-width:850px){
+ .course-banner{display:none}
+ .contact-strip{grid-template-columns:1fr;margin-top:20px}
+}
+
 </style>
 </head>
 <body>
@@ -121,6 +174,18 @@ main{padding:28px 34px 55px;min-width:0}.top{display:flex;justify-content:space-
 <nav class="public-links" aria-label="Navegação principal"><a href="#sobre">Sobre o ENADE</a><a href="#calendarioPublico">Calendário</a><a href="#duvidas">Dúvidas</a><a href="#links">Links</a><button class="coord-btn" id="openLogin">🔒 Área da Coordenação</button></nav>
 <button class="mobile-coord-btn" id="openLoginMobile" type="button" onclick="openCoord()" aria-label="Abrir Área da Coordenação">🔒 <span>Coordenação</span></button>
 </header>
+<section class="course-banner" aria-label="História UFTM — ENADE das Licenciaturas">
+  <div class="course-banner-inner">
+    <img class="course-banner-logo" src="logo-historia-uftm.png" alt="">
+    <div class="course-banner-copy">
+      <strong>HISTÓRIA | UFTM</strong>
+      <b>ENADE DAS LICENCIATURAS</b>
+      <span>INFORMAÇÕES PARA ESTUDANTES</span>
+    </div>
+    <div class="course-banner-mark" aria-hidden="true"></div>
+  </div>
+</section>
+
 <section class="hero-public"><div class="hero-grid"><div><div class="hero-kicker">ENADE DAS LICENCIATURAS 2026</div><h1>História • UFTM</h1><h2>Tudo o que você precisa saber sobre o ENADE, em um só lugar.</h2><p>Informações, prazos e orientações para estudantes do curso de História.</p><div class="hero-actions"><button class="hero-main" onclick="document.getElementById('guia').scrollIntoView({behavior:'smooth'})">🎓 O que eu preciso fazer?</button><button class="hero-light" onclick="document.getElementById('calendarioPublico').scrollIntoView({behavior:'smooth'})">📅 Ver calendário</button></div></div><div class="status-public"><div class="status-label">● SITUAÇÃO ATUAL</div><h3>Avaliação Teórica realizada</h3><p>A prova foi realizada em 20/09 e os gabaritos preliminares foram publicados em 24/09. Agora, acompanhe os próximos marcos: correção da discursiva em novembro, regularidade e resultado individual.</p></div></div></section>
 <div class="public-body"><div class="notice-public"><div class="notice-icon">📣</div><div><b>Aviso da Coordenação</b><small>Atualizado em 29/09/2026</small></div><div>A PND já foi aplicada. A coordenação fará o registro de presença entre 30/09 e 20/10. Estudantes devem acompanhar as próximas divulgações do Inep e, quando for o caso, a Avaliação da Prática.</div></div>
 <section class="public-section" id="sobre"><h2>O que você procura?</h2><p class="desc">Acesse rapidamente as principais informações sobre o ENADE das Licenciaturas 2026.</p><div class="info-grid">
@@ -129,10 +194,29 @@ main{padding:28px 34px 55px;min-width:0}.top{display:flex;justify-content:space-
 <div class="info-card" onclick="openInfo('ap')"><div class="ico">🏫</div><h3>Avaliação da Prática</h3><p>Estágio, regência, supervisor, orientador e instrumentos.</p></div>
 <div class="info-card" onclick="document.getElementById('calendarioPublico').scrollIntoView({behavior:'smooth'})"><div class="ico">📅</div><h3>Calendário 2026</h3><p>Principais datas e prazos em uma linha do tempo.</p></div>
 <div class="info-card" id="duvidas" onclick="openInfo('faq')"><div class="ico">❓</div><h3>Dúvidas frequentes</h3><p>Respostas para as principais perguntas dos estudantes.</p></div>
-<div class="info-card" onclick="openInfo('links')"><div class="ico">🔗</div><h3>Documentos e links oficiais</h3><p>Inep, PND, Sistema Enade e orientações institucionais.</p></div></div></section>
+<div class="info-card" onclick="openInfo('links')"><div class="ico">🔗</div><h3>Documentos e links oficiais</h3><p>Inep, PND, Sistema Enade e orientações institucionais.</p></div></div>
+<div class="note" style="margin-top:16px">
+  <b>Precisa falar com a Coordenação?</b>
+  Para dúvidas individuais sobre inscrição, situação no ENADE ou regularidade,
+  escreva para <a href="mailto:historia@uftm.edu.br"><b>historia@uftm.edu.br</b></a>.
+</div>
+
+</section>
 <section class="guide" id="guia"><div class="guide-title"><div class="q">?</div><div><h2>O que eu preciso fazer agora?</h2><div class="desc">Escolha a sua situação para obter uma orientação inicial.</div></div></div><div class="choice-grid"><button class="choice" onclick="guide('ingressante')"><span>👤</span>Sou ingressante</button><button class="choice" onclick="guide('concluinte')"><span>🎓</span>Sou concluinte</button><button class="choice" onclick="guide('estagio')"><span>🏫</span>Estou no estágio / regência</button><button class="choice" onclick="guide('naosei')"><span>🧭</span>Não sei minha situação</button></div><div id="guideAnswer" class="answer hidden"></div></section>
 <section class="public-section" id="calendarioPublico"><h2>Principais datas do ENADE 2026</h2><p class="desc">Cronograma conferido com as orientações e editais do Inep. Datas que já passaram ficam como referência; destaque para as próximas ações.</p><div class="timeline" style="grid-template-columns:repeat(6,1fr)"><div class="time-item"><div class="time-dot">✓</div><b>20/09</b><p>Aplicação da PND / Avaliação Teórica</p></div><div class="time-item"><div class="time-dot">✓</div><b>24–25/09</b><p>Gabaritos preliminares e prazo de recursos — encerrado</p></div><div class="time-item"><div class="time-dot">IES</div><b>30/09–20/10</b><p>Registro de presença pela coordenação</p></div><div class="time-item"><div class="time-dot">10/11</div><b>Discursiva</b><p>Correção preliminar e resultado dos recursos da expectativa de resposta</p></div><div class="time-item"><div class="time-dot">19/11</div><b>Regularidade</b><p>Divulgação da relação de estudantes regulares na Avaliação Teórica</p></div><div class="time-item"><div class="time-dot">15/12</div><b>Resultado</b><p>Gabaritos finais, resultado individual e Boletim de Desempenho da PND</p></div></div><div class="answer" style="margin-top:22px"><b>Se você não compareceu à prova:</b> o período previsto para solicitação de dispensa pelo estudante é de <b>20/11/2026 a 15/01/2027</b>, nas hipóteses admitidas pelo Inep. Aguarde as orientações e consulte o Sistema Enade no período.</div></section>
 <section class="public-section" id="links"><h2>Fontes e links oficiais</h2><p class="desc">Use esta página como guia, mas consulte também as fontes oficiais.</p><div class="official-links"><a target="_blank" rel="noopener" href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade-das-licenciaturas/orientacoes">ENADE das Licenciaturas • Inep</a><a target="_blank" rel="noopener" href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade-das-licenciaturas/avaliacao-da-pratica">Avaliação da Prática • Inep</a><a target="_blank" rel="noopener" href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/prova-nacional-docente/orientacoes">PND • Inep</a><a target="_blank" rel="noopener" href="https://pnd.inep.gov.br/pnd/">Sistema PND</a><a target="_blank" rel="noopener" href="https://enade.inep.gov.br/enade/">Sistema Enade</a><a target="_blank" rel="noopener" href="https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/prova-nacional-docente/inep-divulga-gabaritos-preliminares-da-pnd/">Gabaritos preliminares da PND</a></div></section></div>
+
+<section class="contact-strip" aria-label="Contatos do Curso de História">
+  <div class="contact-card">
+    <div class="contact-icon" aria-hidden="true">✉️</div>
+    <div><small>Secretaria do Curso</small><a href="mailto:sec.historia@uftm.edu.br">sec.historia@uftm.edu.br</a></div>
+  </div>
+  <div class="contact-card">
+    <div class="contact-icon" aria-hidden="true">✉️</div>
+    <div><small>Coordenação do Curso</small><a href="mailto:historia@uftm.edu.br">historia@uftm.edu.br</a></div>
+  </div>
+</section>
+
 <footer class="public-footer"><img src="logo-historia-uftm.png" alt="História UFTM"><div><b>Universidade Federal do Triângulo Mineiro • Curso de História</b><small>ENADE das Licenciaturas 2026 • Informações para estudantes</small></div><div><small>Última atualização</small><b>29/09/2026</b><small><button class="linkbtn" style="color:#fff" id="footerLogin">🔒 Área de Gestão</button></small></div></footer>
 </section>
 <div id="infoModal" class="modal-info hidden" onclick="if(event.target===this)closeInfo()"><div class="modal-box"><button class="modal-close" onclick="closeInfo()">×</button><div id="infoContent"></div></div></div>
