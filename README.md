@@ -15,3 +15,6 @@ v0.10: revisão completa do cabeçalho responsivo; desktop sem quebra indevida, 
 
 
 v0.11: no celular, remove o menu hambúrguer e oferece acesso direto 'Coordenação'. A navegação completa continua no desktop.
+
+
+v0.11.1: corrige o botão Coordenação no celular para chamar diretamente a função existente openCoord().

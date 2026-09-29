@@ -24,10 +24,6 @@
 <meta name="twitter:description" content="Informações, prazos, orientações e dúvidas frequentes sobre o ENADE para estudantes de História da UFTM.">
 <meta name="twitter:image" content="https://thistoriador.github.io/enade.uftm/preview-enade-historia-uftm-v08.jpg">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
-const openLoginMobile=document.getElementById('openLoginMobile');
-if(openLoginMobile) openLoginMobile.addEventListener('click',()=>{
-  document.getElementById('openLogin')?.click();
-});
 </script>
 <style>
 :root{--wine:#6d202d;--wine2:#511620;--cream:#f5f0e7;--paper:#fff;--ink:#211c1d;--muted:#766d6e;--line:#e5dcd1;--ochre:#c28a3c;--red:#a52b39}
@@ -123,7 +119,7 @@ main{padding:28px 34px 55px;min-width:0}.top{display:flex;justify-content:space-
 <header class="public-head">
 <div class="public-brand"><img src="logo-historia-uftm.png" alt="História UFTM"><div><b>HISTÓRIA <span class="brand-long">| ENADE DAS LICENCIATURAS</span></b><small>INFORMAÇÕES PARA ESTUDANTES</small></div></div>
 <nav class="public-links" aria-label="Navegação principal"><a href="#sobre">Sobre o ENADE</a><a href="#calendarioPublico">Calendário</a><a href="#duvidas">Dúvidas</a><a href="#links">Links</a><button class="coord-btn" id="openLogin">🔒 Área da Coordenação</button></nav>
-<button class="mobile-coord-btn" id="openLoginMobile" type="button" aria-label="Abrir Área da Coordenação">🔒 <span>Coordenação</span></button>
+<button class="mobile-coord-btn" id="openLoginMobile" type="button" onclick="openCoord()" aria-label="Abrir Área da Coordenação">🔒 <span>Coordenação</span></button>
 </header>
 <section class="hero-public"><div class="hero-grid"><div><div class="hero-kicker">ENADE DAS LICENCIATURAS 2026</div><h1>História • UFTM</h1><h2>Tudo o que você precisa saber sobre o ENADE, em um só lugar.</h2><p>Informações, prazos e orientações para estudantes do curso de História.</p><div class="hero-actions"><button class="hero-main" onclick="document.getElementById('guia').scrollIntoView({behavior:'smooth'})">🎓 O que eu preciso fazer?</button><button class="hero-light" onclick="document.getElementById('calendarioPublico').scrollIntoView({behavior:'smooth'})">📅 Ver calendário</button></div></div><div class="status-public"><div class="status-label">● SITUAÇÃO ATUAL</div><h3>Avaliação Teórica realizada</h3><p>A prova foi realizada em 20/09 e os gabaritos preliminares foram publicados em 24/09. Agora, acompanhe os próximos marcos: correção da discursiva em novembro, regularidade e resultado individual.</p></div></div></section>
 <div class="public-body"><div class="notice-public"><div class="notice-icon">📣</div><div><b>Aviso da Coordenação</b><small>Atualizado em 29/09/2026</small></div><div>A PND já foi aplicada. A coordenação fará o registro de presença entre 30/09 e 20/10. Estudantes devem acompanhar as próximas divulgações do Inep e, quando for o caso, a Avaliação da Prática.</div></div>
