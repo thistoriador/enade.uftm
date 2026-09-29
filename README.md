@@ -21,3 +21,6 @@ v0.11.1: corrige o botão Coordenação no celular para chamar diretamente a fun
 
 
 v0.12 final do ciclo: botão Coordenação mobile em vinho; banner institucional no desktop; contatos clicáveis da Secretaria e Coordenação; contato da Coordenação junto ao FAQ.
+
+
+v0.12.1: remove a duplicação de cabeçalhos e transforma o cabeçalho desktop em uma única faixa institucional inspirada no banner aprovado. Mantém contatos e correções da v0.12.

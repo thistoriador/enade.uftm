@@ -165,6 +165,38 @@ main{padding:28px 34px 55px;min-width:0}.top{display:flex;justify-content:space-
  .contact-strip{grid-template-columns:1fr;margin-top:20px}
 }
 
+
+/* v0.12.1 — cabeçalho único, inspirado no banner aprovado */
+@media(min-width:851px){
+ .public-head{
+   min-height:112px;
+   padding:14px clamp(28px,5vw,72px);
+   background:
+     linear-gradient(105deg,rgba(250,246,239,.98) 0%,rgba(250,246,239,.98) 62%,rgba(239,224,207,.96) 100%);
+   border-bottom:5px solid var(--wine);
+   position:relative;overflow:hidden;
+ }
+ .public-head:after{
+   content:"UFTM";position:absolute;right:46px;bottom:-4px;
+   font:900 54px/1 Georgia,serif;letter-spacing:.04em;
+   color:rgba(111,27,40,.09);pointer-events:none;
+ }
+ .public-brand{gap:17px;position:relative;z-index:2}
+ .public-brand img{width:82px;height:82px;flex-basis:82px}
+ .public-brand b{display:block;font-family:Georgia,serif;font-size:24px;line-height:1.08;color:var(--wine)}
+ .public-brand b .brand-long{display:inline}
+ .public-brand small{display:block;margin-top:7px;font-size:10px;font-weight:900;letter-spacing:.11em;color:#735f57}
+ .public-links{position:relative;z-index:2;gap:clamp(13px,1.35vw,22px)}
+ .public-links a{font-size:12px}
+ .coord-btn{background:var(--wine);color:#fff;border-color:var(--wine);padding:12px 15px}
+}
+@media(min-width:851px) and (max-width:1080px){
+ .public-head{padding-left:20px;padding-right:20px}
+ .public-brand img{width:68px;height:68px;flex-basis:68px}
+ .public-brand b{font-size:18px}
+ .public-head:after{font-size:42px;right:20px}
+}
+
 </style>
 </head>
 <body>
@@ -174,17 +206,6 @@ main{padding:28px 34px 55px;min-width:0}.top{display:flex;justify-content:space-
 <nav class="public-links" aria-label="Navegação principal"><a href="#sobre">Sobre o ENADE</a><a href="#calendarioPublico">Calendário</a><a href="#duvidas">Dúvidas</a><a href="#links">Links</a><button class="coord-btn" id="openLogin">🔒 Área da Coordenação</button></nav>
 <button class="mobile-coord-btn" id="openLoginMobile" type="button" onclick="openCoord()" aria-label="Abrir Área da Coordenação">🔒 <span>Coordenação</span></button>
 </header>
-<section class="course-banner" aria-label="História UFTM — ENADE das Licenciaturas">
-  <div class="course-banner-inner">
-    <img class="course-banner-logo" src="logo-historia-uftm.png" alt="">
-    <div class="course-banner-copy">
-      <strong>HISTÓRIA | UFTM</strong>
-      <b>ENADE DAS LICENCIATURAS</b>
-      <span>INFORMAÇÕES PARA ESTUDANTES</span>
-    </div>
-    <div class="course-banner-mark" aria-hidden="true"></div>
-  </div>
-</section>
 
 <section class="hero-public"><div class="hero-grid"><div><div class="hero-kicker">ENADE DAS LICENCIATURAS 2026</div><h1>História • UFTM</h1><h2>Tudo o que você precisa saber sobre o ENADE, em um só lugar.</h2><p>Informações, prazos e orientações para estudantes do curso de História.</p><div class="hero-actions"><button class="hero-main" onclick="document.getElementById('guia').scrollIntoView({behavior:'smooth'})">🎓 O que eu preciso fazer?</button><button class="hero-light" onclick="document.getElementById('calendarioPublico').scrollIntoView({behavior:'smooth'})">📅 Ver calendário</button></div></div><div class="status-public"><div class="status-label">● SITUAÇÃO ATUAL</div><h3>Avaliação Teórica realizada</h3><p>A prova foi realizada em 20/09 e os gabaritos preliminares foram publicados em 24/09. Agora, acompanhe os próximos marcos: correção da discursiva em novembro, regularidade e resultado individual.</p></div></div></section>
 <div class="public-body"><div class="notice-public"><div class="notice-icon">📣</div><div><b>Aviso da Coordenação</b><small>Atualizado em 29/09/2026</small></div><div>A PND já foi aplicada. A coordenação fará o registro de presença entre 30/09 e 20/10. Estudantes devem acompanhar as próximas divulgações do Inep e, quando for o caso, a Avaliação da Prática.</div></div>
