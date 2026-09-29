@@ -1,10 +1,5 @@
-# ENADE UFTM v0.5
+# ENADE UFTM v0.6
 
-Área pública para estudantes + área de gestão protegida.
+Portal público do ENADE das Licenciaturas — História/UFTM + área de gestão.
 
-- Página pública História/UFTM
-- Guia "O que preciso fazer agora?"
-- Calendário e links oficiais
-- Cards informativos e FAQ
-- Área da Coordenação preservada
-- Menu administrativo com rolagem própria
+Atualização pública baseada em fontes oficiais do Inep/MEC e conferência cruzada com portais universitários.
